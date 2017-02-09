@@ -16,17 +16,21 @@ public class MyPanelClass extends JPanel {
                         Insets myInsets = this.getInsets();
                         int x1 = myInsets.left;
                         int y1 = myInsets.top;
-                        int x2 = getWidth() - myInsets.right - 1;
-                        int y2 = getHeight() - myInsets.bottom - 1;
+                        int x2 = getWidth() - myInsets.right -1 ;
+                        int y2 = getHeight() - myInsets.bottom -1;
                         int width = x2 - x1;
                         int height = y2 - y1;
  
                         //Paint the background
                         g.setColor(Color.GRAY);
-                        g.fillRect(x1, y1, width+1, height+1);
+                        g.fillRect(x1, y1, width + 1, height + 1);
                         
                         //Draw a border
                         g.setColor(Color.YELLOW);
                         g.drawRect(x1, y1, width, height);
+                        
+                        //Inside border
+                        g.setColor(Color.CYAN);
+                        g.drawRect(x1 + 4, y1 +4, width-8, height-8);
             }
 }
